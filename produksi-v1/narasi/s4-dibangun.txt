@@ -1,0 +1,1 @@
+We built GHOSTBOARD with plain HTML, CSS, and vanilla JavaScript — no backend, no build step, no login. Kiro's specs, steering docs, and hooks shaped the whole build. The hardest part was honesty: our sandboxed browser couldn't reach the price API, so we built a local relay that serves the real feed — and made the app say WAIT instead of inventing data.

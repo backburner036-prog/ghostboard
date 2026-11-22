@@ -1,0 +1,8 @@
+# GHOSTBOARD .gitignore
+# IMPORTANT: never ignore .kiro/ — Devpost requires it at the repo root.
+# Ignoring it can disqualify the Kiroween submission.
+.DS_Store
+*.log
+
+# Video production files stay local (draft lives in VM; final goes to YouTube).
+*.mp4

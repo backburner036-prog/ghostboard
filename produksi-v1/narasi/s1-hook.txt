@@ -1,0 +1,1 @@
+Meet GHOSTBOARD — a haunted bulletin board system, resurrected as a live gold-trading terminal. Built with Kiro in a single day, it turns a six-minute morning routine into a ten-second check.

@@ -1,0 +1,55 @@
+# INFO PRODUK — GHOSTBOARD (Kiroween 2026)
+# Untuk SBY (video) + Soekarno (koordinator). Diisi lane build 19 Nov 2026.
+
+Nama final: GHOSTBOARD — The Haunted BBS for Gold Traders
+Tagline: The BBS that refuses to die — XAU/USD terminal
+Kategori: Resurrection (Kiroween 2026, Devpost)
+Elevator pitch: BBS tahun 80-an yang sudah mati 25 tahun, dihidupkan lagi
+  sebagai terminal trading emas: harga XAU/USD live, validator entry 4 lapis,
+  dan rencana trade siap-MT5 (atau WAIT yang jujur) — dalam 10 detik,
+  tanpa login, tanpa backend.
+
+URL app live: TODO — GitHub Pages, setelah IDR push repo ke GitHub publik
+  dan menyalakan Pages. (Footage direkam di http://localhost:8931 — app
+  yang sama persis; harga live di footage adalah harga asli via relay lokal,
+  lihat README-footage.)
+URL GitHub: TODO — repo publik IDR (folder ini = root repo).
+  Syarat: folder /.kiro harus terlihat di root repo + LICENSE MIT terdeteksi.
+
+Tim (Mission Control):
+  - IDR — founder / trader emas MT5 / yang daftar + submit + klaim
+  - Habibie (coder) — build app + spec + footage
+  - SBY (video editor) — edit video demo final (< 3 mnt)
+  - Soekarno (PM/koordinator) — koordinasi lane + submit pack
+  - Gusdur / Megawati / Soeharto / Jokowi — tim pendukung (tidak di kredit
+    video kecuali IDR minta; sebut "Mission Control" saja di penutup)
+
+Stack: HTML + CSS + vanilla JavaScript (statis, tanpa framework,
+  tanpa build step, tanpa backend, tanpa login, tanpa API key).
+Live data: https://api.gold-api.com/price/XAU (gratis, tanpa key).
+  Harga di footage: $3,741.25 (19 Nov 2026 06:24 WIB, LIVE).
+  Plan SAMPLE 19 Nov 2026: BUY entry $3,734.35, SL $3,717.35,
+  TP1 $3,768.35 (RR 1:2), TP2 $3,802.35 (RR 1:4).
+  selfTest invarian: 8/8 lolos (Ghostboard.selfTest() di console browser).
+
+Fitur Kiro yang dipakai (BENAR dipakai — jangan klaim lebih):
+  - Specs: .kiro/specs/ghostboard/ (requirements EARS, design, tasks)
+  - Steering: .kiro/steering/ (product.md, tech.md, structure.md)
+  - Hooks: .kiro/hooks/ (lint-on-save, test-on-save)
+  - MCP: .kiro/settings/mcp.json (filesystem + fetch)
+  - Custom agent: .kiro/agents/ghost-analyst.md
+  - Skill: .kiro/skills/gold-analysis/SKILL.md (validator 4 lapis)
+  - TIDAK dipakai (jangan sebut di video): Kiro Crew (rencana next),
+    Kiro IDE/CLI sign-in (milik akun AWS IDR — bukan oleh agent).
+
+Fitur app (6 board): [1] Market (harga live), [2] Analysis (validator
+  4 lapis), [3] Trade Plan (MT5-ready / WAIT), [4] News, [5] Haunted Ticker,
+  [6] About — plus command line (help, price, plan, news, boo).
+
+Deadline: submit Devpost Sab 5 Des 2026 05:00 WIB.
+  Video final ke IDR: 4 Des 2026. Pemenang diumumkan ~3 Feb 2027.
+  Kalau menang: affidavit + form pajak W-8BEN (non-AS) dalam 10 hari kerja
+  — keputusan IDR saat klaim, bukan sekarang.
+
+Larangan (tetap berlaku): tidak ada API key/seed/password/data pribadi
+  di footage mana pun — sudah dicek: tidak ada.

@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:05,875
+Meet GHOSTBOARD — a haunted bulletin board system, resurrected as a live gold-trading terminal.
+
+2
+00:00:05,875 --> 00:00:13,010
+Built with Kiro in a single day, it turns a six-minute morning routine into a ten-second check.
+
+3
+00:00:13,510 --> 00:00:20,950
+Today, a retail gold trader wastes six minutes every morning asking one question: should I trade today?
+
+4
+00:00:20,950 --> 00:00:31,015
+Price app, then a dollar app, then digging through chat history for yesterday's notes, then typing the plan into MT5 digit by digit.
+
+5
+00:00:31,015 --> 00:00:35,829
+Four apps, zero structure — and one typo costs real money.
+
+6
+00:00:35,829 --> 00:00:39,330
+GHOSTBOARD answers in ten seconds, on one screen.
+
+7
+00:00:39,830 --> 00:00:41,544
+Here's how it works.
+
+8
+00:00:41,544 --> 00:00:50,972
+The trader opens GHOSTBOARD and the terminal dials in — live XAU/USD, three thousand seven hundred forty-one dollars, refreshed every sixty seconds.
+
+9
+00:00:50,972 --> 00:00:59,543
+Now watch the Analysis Board: a four-layer validator checks the dollar, the 4-hour EMA50, the 24-hour move, and market structure.
+
+10
+00:00:59,543 --> 00:01:09,828
+Under the hood, Kiro drove this build — specs first, then agent hooks that remind us to run the invariant checks after every task.
+
+11
+00:01:09,828 --> 00:01:14,542
+You can see the full spec in our repo, under dot-kiro.
+
+12
+00:01:14,542 --> 00:01:34,683
+In seconds, we get the verdict — and the Trade Plan Board turns it into an MT5-ready order: buy at three thousand seven hundred thirty-four, stop loss at three thousand seven hundred seventeen, take profit one at three thousand seven hundred sixty-eight — risk-reward one to two.
+
+13
+00:01:34,683 --> 00:01:42,397
+And when no setup passes, it says WAIT, with the zone to watch — no invented entry, ever.
+
+14
+00:01:42,397 --> 00:01:48,825
+Now the trader types plan in the command line — same board, no mouse needed.
+
+15
+00:01:48,825 --> 00:01:52,682
+And the ticker keeps scrolling while the price refreshes.
+
+16
+00:01:52,682 --> 00:01:57,396
+Everything you just saw runs on a real free price feed.
+
+17
+00:01:57,396 --> 00:01:59,110
+Nothing here is mocked.
+
+18
+00:01:59,610 --> 00:02:07,007
+We built GHOSTBOARD with plain HTML, CSS, and vanilla JavaScript — no backend, no build step, no login.
+
+19
+00:02:07,007 --> 00:02:11,117
+Kiro's specs, steering docs, and hooks shaped the whole build.
+
+20
+00:02:11,117 --> 00:02:25,500
+The hardest part was honesty: our sandboxed browser couldn't reach the price API, so we built a local relay that serves the real feed — and made the app say WAIT instead of inventing data.
+
+21
+00:02:26,000 --> 00:02:33,064
+Next, we're adding live dollar and moving-average feeds, a real news wire, and a Kiro Crew app.
+
+22
+00:02:33,064 --> 00:02:41,791
+We're Mission Control — Habibie builds, SBY cuts the video, Soekarno keeps the crew on course, and IDR trades the gold.
+
+23
+00:02:41,791 --> 00:02:44,700
+Try GHOSTBOARD live at the link below.
+
+24
+00:02:44,700 --> 00:02:48,440
+Thank you — built with Kiro for Kiroween 2026.

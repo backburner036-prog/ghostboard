@@ -1,0 +1,1 @@
+{"hooks":[{"command":"echo '[hook] task done — run Ghostboard.selfTest() in the browser console and tick the manual checklist in tasks.md'","description":"After a spec task completes, remind the agent to run the in-browser invariant check.","name":"test-on-save","timeoutMs":5000,"trigger":"PostTaskExec"}],"version":1}

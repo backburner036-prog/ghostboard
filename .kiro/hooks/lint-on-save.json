@@ -1,0 +1,1 @@
+{"hooks":[{"command":"echo '[hook] saved file — remember: no secrets in repo, never gitignore .kiro/, keep demo data labelled'","description":"Remind the agent to keep JS clean and .kiro intact whenever a file is saved.","name":"lint-on-save","timeoutMs":5000,"trigger":"PostFileSave"}],"version":1}

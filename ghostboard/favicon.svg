@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- GHOSTBOARD favicon — ghost mark, palette from css/style.css -->
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="#070a07" stroke="#33ff66" stroke-width="2"/>
+  <path d="M32 9 C19.5 9 11 19.5 11 32 L11 53 L17.5 46.5 L24 53 L32 46.5 L40 53 L46.5 46.5 L53 53 L53 32 C53 19.5 44.5 9 32 9 Z" fill="#33ff66"/>
+  <circle cx="24.5" cy="30" r="3.6" fill="#070a07"/>
+  <circle cx="39.5" cy="30" r="3.6" fill="#070a07"/>
+  <ellipse cx="32" cy="40" rx="3.2" ry="4.4" fill="#ff7a1a"/>
+</svg>

@@ -1,0 +1,126 @@
+/* GHOSTBOARD — haunted terminal theme. No frameworks, no build step. */
+:root {
+  --bg: #070a07;
+  --panel: #0b120b;
+  --green: #33ff66;
+  --green-dim: #1d9e40;
+  --pumpkin: #ff7a1a;
+  --purple: #b388ff;
+  --grey: #8a9a8a;
+  --red: #ff4444;
+  --amber: #ffcc00;
+  --border: #1e3a22;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--green);
+  font-family: "Courier New", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+a { color: var(--pumpkin); }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+code { color: var(--amber); }
+
+/* CRT scanlines overlay */
+.crt {
+  position: fixed; inset: 0; pointer-events: none; z-index: 50;
+  background: repeating-linear-gradient(
+    to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.18) 2px 4px);
+  mix-blend-mode: multiply;
+}
+@media (prefers-reduced-motion: reduce) { .crt { display: none; } }
+
+.hidden { display: none !important; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* Boot screen */
+.boot { max-width: 900px; margin: 0 auto; padding: 8vh 16px; min-height: 100vh; }
+.boot-text { white-space: pre-wrap; color: var(--green); text-shadow: 0 0 8px rgba(51,255,102,.6); margin: 0; }
+.boot-skip { color: var(--grey); text-align: center; animation: blink 1.2s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .boot-skip { animation: none; } }
+
+/* Terminal */
+.terminal { max-width: 900px; margin: 0 auto; padding: 16px 16px 48px; }
+.term-header { text-align: center; }
+.logo {
+  color: var(--pumpkin); margin: 0; font-size: clamp(6px, 1.4vw, 12px);
+  line-height: 1.2; overflow-x: auto; white-space: pre;
+  text-shadow: 0 0 12px rgba(255,122,26,.55);
+}
+.tagline { color: var(--purple); letter-spacing: 1px; margin: 10px 0 4px; }
+.statusline {
+  display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 6px 0; color: var(--grey); font-size: 13px; margin: 8px 0 0;
+}
+.statusline #conn-status { color: var(--green); }
+.statusline #price-chip { color: var(--amber); }
+
+.menu { margin: 18px 0 6px; }
+.menu-title { color: var(--grey); margin: 0 0 6px; }
+.menu-list { list-style: none; margin: 0; padding: 0; }
+.menu-list li { padding: 3px 0; }
+.menu-list button {
+  color: var(--pumpkin); font-weight: bold; text-decoration: underline;
+  text-underline-offset: 3px; padding: 2px 4px;
+}
+.menu-list button:hover, .menu-list button:focus-visible { background: var(--pumpkin); color: #000; outline: none; }
+
+.board {
+  border: 1px solid var(--border); background: var(--panel);
+  padding: 16px 18px; margin-top: 14px; min-height: 220px;
+  box-shadow: 0 0 24px rgba(51,255,102,.08), inset 0 0 60px rgba(0,0,0,.5);
+}
+.board h2 { color: var(--pumpkin); margin: 0 0 10px; font-size: 17px; letter-spacing: 1px; }
+.board h3 { color: var(--purple); margin: 14px 0 6px; font-size: 15px; }
+.board p { margin: 6px 0; }
+.board .big-price { font-size: clamp(30px, 8vw, 52px); font-weight: bold; color: var(--green); text-shadow: 0 0 16px rgba(51,255,102,.5); margin: 4px 0; }
+.board .up { color: var(--green); }
+.board .down { color: var(--red); }
+.board .warn { color: var(--amber); }
+.board .dim { color: var(--grey); }
+.board .badge {
+  display: inline-block; border: 1px solid currentColor; padding: 0 6px;
+  font-size: 12px; letter-spacing: 1px; margin-left: 6px; vertical-align: middle;
+}
+.badge.live { color: var(--green); }
+.badge.demo { color: var(--amber); }
+.badge.sample { color: var(--purple); }
+.board table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+.board td, .board th { border-bottom: 1px dashed var(--border); padding: 5px 6px; text-align: left; vertical-align: top; }
+.board th { color: var(--grey); font-weight: normal; }
+.board .plan-box { border: 1px solid var(--pumpkin); padding: 12px; margin: 10px 0; }
+.board .wait-box { border: 1px solid var(--amber); padding: 12px; margin: 10px 0; }
+.board .ascii { color: var(--purple); font-size: 12px; line-height: 1.2; overflow-x: auto; }
+.board ul { margin: 6px 0; padding-left: 20px; }
+.board .ticker-tape { font-size: 17px; white-space: nowrap; overflow: hidden; }
+.board .ticker-tape span { display: inline-block; padding-left: 100%; animation: tape 22s linear infinite; }
+@keyframes tape { to { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) { .board .ticker-tape span { animation: none; padding-left: 0; } }
+.mode-toggle { margin: 8px 0; }
+.mode-toggle button {
+  border: 1px solid var(--green-dim); color: var(--green); padding: 3px 10px; margin-right: 8px;
+}
+.mode-toggle button[aria-pressed="true"] { background: var(--green); color: #000; }
+
+.cli { display: flex; align-items: center; gap: 6px; margin-top: 14px; border: 1px solid var(--border); background: var(--panel); padding: 8px 10px; }
+.cli input {
+  flex: 1; background: none; border: none; outline: none; color: var(--green);
+  font: inherit; min-width: 0;
+}
+.cli input::placeholder { color: var(--grey); }
+.hint { color: var(--grey); font-size: 13px; margin: 6px 0 0; }
+.term-footer { color: var(--grey); font-size: 12px; margin-top: 22px; border-top: 1px solid var(--border); padding-top: 10px; }
+.term-footer p { margin: 3px 0; }
+
+@media (max-width: 560px) {
+  body { font-size: 14px; }
+  .board { padding: 12px; }
+  .logo { font-size: 5.5px; }
+}

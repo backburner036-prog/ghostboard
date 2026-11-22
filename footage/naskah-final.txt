@@ -1,0 +1,60 @@
+# NASKAH FINAL — GHOSTBOARD | Kiroween 2026 (video 2:50, ~385 kata)
+# Sumber: 03-skrip-narasi-kiroween.md — SEMUA slot [...] sudah diisi lane build.
+# Angka di bawah ini VERIFIED dari build 19 Nov 2026 (bukan klaim):
+#   - harga live $3,741.25 (gold-api.com, 19 Nov 2026 06:24 WIB)
+#   - plan SAMPLE 19 Nov 2026: entry $3,734.35, SL $3,717.35, TP1 $3,768.35 (RR 1:2), TP2 $3,802.35 (RR 1:4)
+#   - selfTest 8/8 lolos; build 1 hari (19 Nov 2026); 6 board; refresh 60 dtk
+#   - URL live MASIH TODO — diisi setelah IDR push repo + GitHub Pages (lihat F9).
+# Bahasa: Inggris · Tempo: ~145 kata/menit · Baca persis.
+
+## [0:00–0:12] HOOK — 31 kata
+> "Meet GHOSTBOARD — a haunted bulletin board system, resurrected as a live gold-trading terminal. Built with Kiro in a single day, it turns a six-minute morning routine into a ten-second check."
+Layar: title card nama + tagline (3 dtk) → cut ke hero app (F1).
+
+## [0:12–0:35] MASALAH — 59 kata
+> "Today, a retail gold trader wastes six minutes every morning asking one question: should I trade today? Price app, then a dollar app, then digging through chat history for yesterday's notes, then typing the plan into MT5 digit by digit. Four apps, zero structure — and one typo costs real money. GHOSTBOARD answers in ten seconds, on one screen."
+Layar: workflow lama (F2) — angka "6 MINUTES · 4 APPS · 0 STRUCTURED PLAN" sebagai teks besar.
+
+## [0:35–1:50] DEMO LIVE — 185 kata (termasuk sisipan Kiro ±30 kata)
+> "Here's how it works. The trader opens GHOSTBOARD and the terminal dials in — live XAU/USD, three thousand seven hundred forty-one dollars, refreshed every sixty seconds. Now watch the Analysis Board: a four-layer validator checks the dollar, the 4-hour EMA50, the 24-hour move, and market structure. Under the hood, Kiro drove this build — specs first, then agent hooks that remind us to run the invariant checks after every task. You can see the full spec in our repo, under dot-kiro. In seconds, we get the verdict — and the Trade Plan Board turns it into an MT5-ready order: buy at three thousand seven hundred thirty-four, stop loss at three thousand seven hundred seventeen, take profit one at three thousand seven hundred sixty-eight — risk-reward one to two. And when no setup passes, it says WAIT, with the zone to watch — no invented entry, ever. Now the trader types plan in the command line — same board, no mouse needed. And the ticker keeps scrolling while the price refreshes. Everything you just saw runs on a real free price feed. Nothing here is mocked."
+Layar: SATU user, SATU tugas, awal–akhir (F3 → F4 → F6). Sisipan Kiro (F5) ±10 dtk di tengah langkah 2. Hasil akhir ditahan ≥5 dtk, zoom ke angka kunci (entry/SL/TP).
+
+## [1:50–2:15] CARA DIBANGUN — 63 kata
+> "We built GHOSTBOARD with plain HTML, CSS, and vanilla JavaScript — no backend, no build step, no login. Kiro's specs, steering docs, and hooks shaped the whole build. The hardest part was honesty: our sandboxed browser couldn't reach the price API, so we built a local relay that serves the real feed — and made the app say WAIT instead of inventing data."
+Layar: diagram arsitektur (F7) — maksimal 10 detik, jangan pamer file tree.
+
+## [2:15–2:50] PENUTUP — 54 kata
+> "Next, we're adding live dollar and moving-average feeds, a real news wire, and a Kiro Crew app. We're Mission Control — Habibie builds, SBY cuts the video, Soekarno keeps the crew on course, and IDR trades the gold. Try GHOSTBOARD live at the link below. Thank you — built with Kiro for Kiroween 2026."
+Layar: URL app besar + logo + nama tim (URL diisi setelah deploy GitHub Pages — lihat F9). Musik (bebas lisensi) fade out. Total video berhenti di 2:45–2:50.
+
+## Hitung kata (aktual, dihitung lane build)
+| Segmen | Target | Aktual |
+|---|---|---|
+| Hook | ~30 | 31 |
+| Masalah | ~55 | 59 |
+| Demo (termasuk sisipan Kiro) | ~185 | 185 |
+| Dibangun | ~60 | 63 |
+| Penutup | ~55 | 54 |
+| **Total** | **~385** | **392** |
+392 ÷ 145 ≈ 2:42 bicara + jeda/napas ≈ 2:47. PAS untuk target 2:45–2:50.
+
+## Judul + deskripsi YouTube (draf — IDR yang upload)
+- **Judul:** `GHOSTBOARD — The BBS That Refuses to Die | Built with Kiro | Kiroween 2026`
+- **Deskripsi (copy-paste, isi URL setelah deploy):**
+```
+GHOSTBOARD — a Bulletin Board System, dead for 25 years, resurrected as a live XAU/USD gold-trading terminal.
+
+A retail gold trader wastes six minutes every morning across four apps just to ask: should I trade today? GHOSTBOARD answers in ten seconds, on one screen — live price, a 4-layer entry validator, and an MT5-ready plan (or an honest WAIT).
+
+Try it live: [URL APP — GitHub Pages, TODO setelah IDR push repo]
+Code: [URL GITHUB — TODO setelah IDR push repo]
+Built with Kiro (specs, steering, hooks, MCP, custom agent) for Kiroween 2026 — https://kiroween.devpost.com/
+
+Timestamps:
+0:00 What it is
+0:12 The problem
+0:35 Live demo
+1:50 How we built it
+2:15 What's next
+```
+- **Setting upload:** Publik, "Not for Kids", kategori Science & Technology, thumbnail 1280×720.
