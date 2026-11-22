@@ -57,8 +57,8 @@ live XAU/USD trading terminal. Dial in, read the boards, get your MT5 plan.
 
 **Links to fill in at submit time:**
 
-- App URL (live): `[TODO — GitHub Pages URL after IDR pushes repo]`
-- GitHub repo (public): `[TODO — IDR's repo URL]`
+- App URL (live): https://backburner036-prog.github.io/ghostboard/ghostboard/ (GitHub Pages, branch main, verified live 22 Nov 2026)
+- GitHub repo (public): https://github.com/backburner036-prog/ghostboard (pushed 22 Nov 2026, commit b2a4c35; *.mp4 excluded via .gitignore — video draft stays in VM)
 - Demo video (YouTube, public, < 3 min): `[TODO — SBY's edit, IDR uploads]`
 
 **Bonus prizes to tick:** Social Blitz (if IDR posts with
